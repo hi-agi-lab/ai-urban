@@ -92,11 +92,16 @@ from the regression set `detections.json`, unmodified).
 | Scene | Output |
 |------|---------|
 | Street occupation | ![Street](images/scene_stall.jpg) |
+| Mobile vendor | ![Vendor](images/scene_vendor.jpg) |
 | Exposed garbage | ![Garbage](images/scene_garbage.jpg) |
+| Waste droppings | ![Dust](images/scene_dust.jpg) |
+| Road damage | ![Road](images/scene_road.jpg) |
+| Greenery damage | ![Greenery](images/scene_greenery.jpg) |
+| Illegal billboard | ![Billboard](images/scene_billboard.jpg) |
 | Illegal construction | ![Construction](images/scene_constr.jpg) |
 | Sewage dumping | ![Sewage](images/scene_sewage.jpg) |
 
-Four-event overview:
+Nine-event overview:
 
 <img src="images/demo_montage.jpg" alt="Annotated events overview" width="100%"/>
 

@@ -78,11 +78,16 @@
 | 场景 | 输出 |
 |------|---------|
 | 占道经营 | ![占道](images/scene_stall.jpg) |
+| 流动摊贩 | ![摊贩](images/scene_vendor.jpg) |
 | 暴露垃圾 | ![垃圾](images/scene_garbage.jpg) |
+| 渣土遗撒 | ![渣土](images/scene_dust.jpg) |
+| 道路破损 | ![道路](images/scene_road.jpg) |
+| 绿化损毁 | ![绿化](images/scene_greenery.jpg) |
+| 违规户外广告 | ![广告](images/scene_billboard.jpg) |
 | 违建 | ![违建](images/scene_constr.jpg) |
 | 乱倒污水 | ![污水](images/scene_sewage.jpg) |
 
-四类事件总览：
+九类事件总览：
 
 <img src="images/demo_montage.jpg" alt="事件标注总览" width="100%"/>
 
