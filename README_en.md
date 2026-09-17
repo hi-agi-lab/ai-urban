@@ -178,23 +178,7 @@ python -m urban_guard.real_eval --report
 
 ## 9. Architecture
 
-```mermaid
-flowchart LR
-    subgraph EDGE[Edge runtime]
-        SRC[PatrolStreamSource\nRTSP + reconnect alerts] --> PIPE[CameraPipeline\nhealth gating]
-        PIPE --> ENG[UrbanGuardEngine\n9 event types · tiered patrol]
-        ENG --> VLM[AI-Reference\nVLM adjudication]
-        ENG --> EV[(Evidence store\nwatermark + 180-day retention)]
-        ENG --> OBX[(SQLite outbox\nidempotent clues)]
-    end
-    subgraph PLATFORM[Platform]
-        ING[IngestServer\nHMAC signed] --> REV[Review queue\nby street / category]
-        REV --> WO[Work orders dispatch/close\nSLA + close-out recheck]
-    end
-    OBX -->|signed push| ING
-    WL[Whitelists\nAP[Billboard approvals]] -->|suppress| ENG
-    CG[Municipal system] <-->|dispatch/close| WO
-```
+<img src="images/architecture_en.png" alt="System architecture: edge runtime (streaming → detection → VLM adjudication → evidence/clues) and platform (ingest → review → work-order loop)" width="100%"/>
 
 ## 10. Scope and limitations
 

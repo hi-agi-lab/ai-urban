@@ -160,23 +160,7 @@ python -m urban_guard.real_eval --report
 
 ## 9. 系统架构
 
-```mermaid
-flowchart LR
-    subgraph EDGE[边缘运行时]
-        SRC[PatrolStreamSource\nRTSP 常连 + 断流告警] --> PIPE[CameraPipeline\n健康门控]
-        PIPE --> ENG[UrbanGuardEngine\n九类事件 · 分档轮巡]
-        ENG --> VLM[AI-Reference\nVLM 语义裁决]
-        ENG --> EV[(证据库\n水印 + 180 天留存)]
-        ENG --> OBX[(SQLite outbox\n幂等线索)]
-    end
-    subgraph PLATFORM[平台侧]
-        ING[IngestServer\nHMAC 签名] --> REV[复核立案队列\n街道/类目分拣]
-        REV --> WO[工单 dispatch/close\nSLA 对账 + 结案复查]
-    end
-    OBX -->|签名推送| ING
-    WL[疏导点白名单\nAP[广告审批库]] -->|抑制| ENG
-    CG[城管工单系统] <-->|dispatch/close 回写| WO
-```
+<img src="images/architecture.png" alt="系统架构：边缘运行时（取流→检测→VLM 裁决→证据库/线索）与平台侧（接入→复核→工单闭环）" width="100%"/>
 
 ## 10. 范围与限制
 
