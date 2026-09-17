@@ -198,29 +198,7 @@ python -m urban_guard.real_eval --report
 - **Tiled inference costs 4× per-frame compute** and must be budgeted;
   tier-C points are excluded from acceptance statistics by design.
 
-## 11. Repository layout
-
-```
-urban_guard/
-├── categories.py       # 9-event registry: prompts / rules / SLOs / defaults
-├── registry.py         # Point ledger (tiers) / whitelists / approvals
-├── scheduler.py        # Tiered patrol + night downgrade + upfreq windows
-├── detectors.py        # Open-vocab adapter: mapping / tiling / negative guards
-├── rules.py            # Rule engine: persistence / area grading / whitelist
-├── slowchange.py       # Slow-change compare + AI-Recognize embeddings + AI-Reference adjudication
-├── dedupe.py           # 24h merge + repeat-offender linking (incremental UF)
-├── engine.py           # UrbanGuardEngine: multi-category + state restore
-├── evidence.py         # Evidence chain: watermark + 180-day retention
-├── review.py           # Review queue + work orders + close-out redispatch
-├── store.py            # SQLite: ledger/whitelist/approvals/review/orders
-├── runner.py           # Patrol runtime: config → schedule → signed outbox
-├── acceptance.py       # §8.4 tiered acceptance gate CLI
-├── real_eval.py        # 382-image dual-dataset regression (tiling + WL mode)
-├── deploy/             # Dockerfile / compose / ref_server (VLM service)
-└── tests/              # 97 unit tests + dual image sets + prompt probes
-```
-
-## 12. License & data statement
+## 11. License & data statement
 
 The code is commercial software (all rights reserved). Reproduction,
 modification, distribution, or commercial use without authorization is not

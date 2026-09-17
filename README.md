@@ -175,29 +175,7 @@ python -m urban_guard.real_eval --report
 - **tile 分块的算力代价为 4× 单帧**，部署预算须相应规划；C 档点位不进入
   验收统计（期待管理条款）。
 
-## 11. 仓库结构
-
-```
-urban_guard/
-├── categories.py       # 九类事件注册表: 提示词库/规则/SLO/工单默认 (单一出处)
-├── registry.py         # 点位台账 (A/B/C 档) / 疏导点白名单 / 广告审批库
-├── scheduler.py        # 分档轮巡 + 夜间降档 + 升频时段
-├── detectors.py        # 开放词汇适配: 提示词映射 / tile 分块 / 负提示消歧
-├── rules.py            # 规则引擎: 持续确认 / 面积分档 / 白名单抑制
-├── slowchange.py       # 慢变量比对 + AI-Recognize 嵌入 + AI-Reference 裁决
-├── dedupe.py           # 24h 合并 + 屡犯串联 (增量并查集)
-├── engine.py           # UrbanGuardEngine: 多类目并跑 + 状态续跑
-├── evidence.py         # 证据链: 水印落盘 + 180 天留存清理
-├── review.py           # 复核立案队列 + 工单闭环 + 结案复查自动重派
-├── store.py            # SQLite: 台账/白名单/审批/复核/工单 五表
-├── runner.py           # 轮巡运行时: 配置 → 调度 → outbox 签名推送
-├── acceptance.py       # §8.4 分档验收门禁 CLI
-├── real_eval.py        # 382 图双数据集回归 (tile + 白名单口径)
-├── deploy/             # Dockerfile / compose / ref_server (VLM 服务)
-└── tests/              # 97 单测 + 双图集 + 提示词探针
-```
-
-## 12. License 与数据声明
+## 11. License 与数据声明
 
 代码为商业软件（Commercial Software），未经授权不得复制、修改、
 分发或商用。验收集图片来自百度图片搜索，**不随仓库分发**；
