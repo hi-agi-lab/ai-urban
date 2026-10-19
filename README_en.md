@@ -6,7 +6,6 @@
 closure for nine street-order event types on existing CCTV.**
 
 ![python](https://img.shields.io/badge/python-3.8%2B-blue)
-![ci](https://img.shields.io/badge/CI-pending-lightgrey)
 ![deps](https://img.shields.io/badge/core%20deps-numpy%20%2B%20opencv-orange)
 ![tests](https://img.shields.io/badge/tests-97%20passed-brightgreen)
 ![license](https://img.shields.io/badge/license-Commercial-blue)

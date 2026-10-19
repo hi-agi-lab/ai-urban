@@ -5,8 +5,6 @@
 **复用存量摄像头的九类市容事件视频分析系统：检出、复核、工单闭环。**
 
 ![python](https://img.shields.io/badge/python-3.8%2B-blue)
-<!-- 发布时将 OWNER/REPO 替换为实际仓库路径, 并将 ci.yml 复制到 .github/workflows/ci.yml -->
-![ci](https://img.shields.io/badge/CI-pending-lightgrey)
 ![deps](https://img.shields.io/badge/core%20deps-numpy%20%2B%20opencv-orange)
 ![tests](https://img.shields.io/badge/tests-97%20passed-brightgreen)
 ![license](https://img.shields.io/badge/license-Commercial-blue)
