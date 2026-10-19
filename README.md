@@ -11,6 +11,9 @@
 ![tests](https://img.shields.io/badge/tests-97%20passed-brightgreen)
 ![license](https://img.shields.io/badge/license-Commercial-blue)
 
+[![powered by AutoVision](https://img.shields.io/badge/powered%20by-AutoVision-0FDC78)](https://github.com/hi-agi-lab/AutoVision)
+[![pypi](https://img.shields.io/pypi/v/autovision-framework)](https://pypi.org/project/autovision-framework/)
+
 **[English](README_en.md)** | 简体中文
 
 <img src="images/demo_patrol.gif" alt="轮巡流程: 取帧 → tile 分块 → 检测 → VLM 裁决 → 白名单抑制" width="760px"/>
@@ -186,3 +189,7 @@ python -m urban_guard.real_eval --report
 分发或商用。验收集图片来自百度图片搜索，**不随仓库分发**；
 `fetch_dataset_v3.py` 提供可复现抓取（标注仅供研究），
 `detections.json` 与评估报告随仓库提供检测结果。
+
+---
+
+本方案的检测底座、流式推理运行时与导出链路由开源框架 [AutoVision](https://github.com/hi-agi-lab/AutoVision) 提供（`pip install autovision-framework`）；接入设计见[《行业方案接入》](https://hi-agi-lab.github.io/AutoVision/ecosystem/)。

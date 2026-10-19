@@ -11,6 +11,9 @@ closure for nine street-order event types on existing CCTV.**
 ![tests](https://img.shields.io/badge/tests-97%20passed-brightgreen)
 ![license](https://img.shields.io/badge/license-Commercial-blue)
 
+[![powered by AutoVision](https://img.shields.io/badge/powered%20by-AutoVision-0FDC78)](https://github.com/hi-agi-lab/AutoVision)
+[![pypi](https://img.shields.io/pypi/v/autovision-framework)](https://pypi.org/project/autovision-framework/)
+
 English | **[简体中文](README.md)**
 
 <img src="images/demo_patrol.gif" alt="Patrol flow: frame capture → tiling → detection → VLM adjudication → whitelist suppression" width="760px"/>
@@ -211,3 +214,7 @@ permitted. Evaluation images are scraped from Baidu Image search and are
 **not distributed with the repository**; `fetch_dataset_v3.py` reproduces
 the crawl for research use, and `detections.json` plus reports ship the
 detection results.
+
+---
+
+The detection backbone, streaming inference runtime, and export chain of this solution are provided by the open-source framework [AutoVision](https://github.com/hi-agi-lab/AutoVision) (`pip install autovision-framework`); see the [integration design](https://hi-agi-lab.github.io/AutoVision/ecosystem/) for details.
